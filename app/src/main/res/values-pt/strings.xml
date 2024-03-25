@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="note">Nota</string>
+    <string name="app_name">Laboratório 2</string>
+    <string name="addNote">Adicionar</string>
+    <string name="update">Atualizar</string>
+    <string name="delete">Apagar</string>
+    <string name="backToList">Voltar</string>
+    <string name="backToListFromUpdate">Voltar</string>
+    <string name="save">Guardar</string>
+    <string name="updateSuccess">Nota atualizada com sucesso!</string>
+    <string name="emptyNote">Não pode guardar uma nota vazia!</string>
+    <string name="deleteSuccess">Nota apagada com sucesso!</string>
+    <string name="saveSuccess">Nota guardada com sucesso!</string>
+    <string name="yes">Sim</string>
+    <string name="no">Não</string>
+    <string name="sureDelete">Tem a certeza que pretende apagar a nota?</string>
+</resources>

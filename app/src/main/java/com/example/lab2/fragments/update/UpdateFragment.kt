@@ -30,7 +30,7 @@ class UpdateFragment : Fragment() {
 
         mNoteViewModel = ViewModelProvider(this)[NoteViewModel::class.java]
 
-        view.findViewById<TextView>(R.id.updateNote).text = args.currentNote.note
+        view.findViewById<TextView>(R.id.note).text = args.currentNote.note
 
         val updateButton = view.findViewById<Button>(R.id.update)
         updateButton.setOnClickListener {
@@ -54,31 +54,31 @@ class UpdateFragment : Fragment() {
         val noteText = view?.findViewById<EditText>(R.id.updateNote)?.text.toString()
 
         if(noteText.isEmpty()) {
-            makeText(context , "Não pode uma nota vazia!", Toast.LENGTH_LONG).show()
+            makeText(context , getString(R.string.emptyNote), Toast.LENGTH_LONG).show()
         }
         else {
             val note = Note(args.currentNote.id, noteText)
 
             mNoteViewModel.updateNote(note)
 
-            makeText(requireContext(), "Nota atualizada com sucesso!", Toast.LENGTH_LONG).show()
+            makeText(requireContext(), getString(R.string.updateSuccess), Toast.LENGTH_LONG).show()
             findNavController().navigate(R.id.action_updateFragment_to_listFragment)
         }
     }
 
     private fun deleteNote() {
         val builder = AlertDialog.Builder(requireContext())
-        builder.setPositiveButton("Sim") { _, _ ->
+        builder.setPositiveButton(R.string.yes) { _, _ ->
             mNoteViewModel.deleteNote(args.currentNote)
             makeText(
                 requireContext(),
-                "Nota apagada com sucesso!",
+                getString(R.string.deleteSuccess),
                 Toast.LENGTH_SHORT).show()
             findNavController().navigate(R.id.action_updateFragment_to_listFragment)
         }
-        builder.setNegativeButton("Não") { _, _ -> }
-        builder.setTitle("Apagar")
-        builder.setMessage("Tem a certeza que pretende apagar a Nota?")
+        builder.setNegativeButton(getString(R.string.no)) { _, _ -> }
+        builder.setTitle(getString(R.string.delete))
+        builder.setMessage(getString(R.string.sureDelete))
         builder.create().show()
     }
 }

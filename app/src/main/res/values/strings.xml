@@ -1,3 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">LAB2</string>
+    <string name="note">Note</string>
+    <string name="app_name">Laboratory 2</string>
+    <string name="addNote">Add</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
+    <string name="backToList">Back</string>
+    <string name="backToListFromUpdate">Back</string>
+    <string name="save">Save</string>
+    <string name="updateSuccess">Note updated successfully!</string>
+    <string name="emptyNote">A note can\'t be empty!</string>
+    <string name="deleteSuccess">Note deleted successfully!</string>
+    <string name="saveSuccess">Note saved successfully!</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="sureDelete">Are you sure you want to delete this note?</string>
 </resources>

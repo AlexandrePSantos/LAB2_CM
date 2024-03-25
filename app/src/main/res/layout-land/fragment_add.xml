@@ -26,17 +26,27 @@
             android:id="@+id/addNote"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-
-        <Button
-            android:id="@+id/save"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/save" />
+            android:orientation="horizontal"
+            android:weightSum="3">
 
-        <Button
-            android:id="@+id/backToList"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/backToList" />
+            <Button
+                android:id="@+id/save"
+                android:layout_width="316dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@android:color/holo_blue_light"
+                android:text="@string/save" />
+
+            <Button
+                android:id="@+id/backToList"
+                android:layout_width="319dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@android:color/holo_blue_light"
+                android:text="@string/backToList" />
+        </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
